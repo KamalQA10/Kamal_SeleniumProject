@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test_All(failed)">
+    <parameter name="browser" value="IE"/>
+    <groups>
+      <run>
+        <include name="Sanity"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.mystore.testcases.AccountCreationPageTest">
+        <methods>
+          <include name="verifyCreateAccount"/>
+          <include name="loadConfig"/>
+          <include name="afterSuite"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.mystore.testcases.AccountCreationPageTest -->
+      <class name="com.mystore.testcases.LoginPageTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="loadConfig"/>
+          <include name="afterSuite"/>
+          <include name="loginTest" invocation-numbers="0"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.mystore.testcases.LoginPageTest -->
+    </classes>
+  </test> <!-- Test_All(failed) -->
+</suite> <!-- Failed suite [Suite] -->
